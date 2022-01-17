@@ -11,7 +11,9 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        let myArray = MyArray<Int>(1, 3, 5, 7)
+        myArray.printAllValues()
     }
 
 
