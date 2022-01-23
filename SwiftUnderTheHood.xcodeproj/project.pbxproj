@@ -11,6 +11,9 @@
 		3B53CBF02796091A003709D0 /* MyArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B53CBEC2796091A003709D0 /* MyArray.swift */; };
 		3B53CBF12796091A003709D0 /* MyContiguousArrayStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B53CBED2796091A003709D0 /* MyContiguousArrayStorage.swift */; };
 		3B53CBF22796091A003709D0 /* MyArrayBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B53CBEE2796091A003709D0 /* MyArrayBody.swift */; };
+		3B75170E279C4D9C002E2BED /* MyCodableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B75170D279C4D9C002E2BED /* MyCodableViewController.swift */; };
+		3B751710279C4DF1002E2BED /* MyCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B75170F279C4DF1002E2BED /* MyCodable.swift */; };
+		3B751714279C5C0D002E2BED /* CHelper.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B751713279C5C0D002E2BED /* CHelper.c */; };
 		3B8E601927935FEE00B76325 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8E601827935FEE00B76325 /* AppDelegate.swift */; };
 		3B8E601B27935FEE00B76325 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8E601A27935FEE00B76325 /* SceneDelegate.swift */; };
 		3B8E601D27935FEE00B76325 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8E601C27935FEE00B76325 /* ViewController.swift */; };
@@ -24,6 +27,11 @@
 		3B53CBEC2796091A003709D0 /* MyArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyArray.swift; sourceTree = "<group>"; };
 		3B53CBED2796091A003709D0 /* MyContiguousArrayStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyContiguousArrayStorage.swift; sourceTree = "<group>"; };
 		3B53CBEE2796091A003709D0 /* MyArrayBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyArrayBody.swift; sourceTree = "<group>"; };
+		3B75170D279C4D9C002E2BED /* MyCodableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCodableViewController.swift; sourceTree = "<group>"; };
+		3B75170F279C4DF1002E2BED /* MyCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCodable.swift; sourceTree = "<group>"; };
+		3B751711279C5C0C002E2BED /* SwiftUnderTheHood-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftUnderTheHood-Bridging-Header.h"; sourceTree = "<group>"; };
+		3B751712279C5C0D002E2BED /* CHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CHelper.h; sourceTree = "<group>"; };
+		3B751713279C5C0D002E2BED /* CHelper.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = CHelper.c; sourceTree = "<group>"; };
 		3B8E601527935FEE00B76325 /* SwiftUnderTheHood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUnderTheHood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B8E601827935FEE00B76325 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B8E601A27935FEE00B76325 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +53,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B75170C279C4D7E002E2BED /* MyCodable */ = {
+			isa = PBXGroup;
+			children = (
+				3B75170D279C4D9C002E2BED /* MyCodableViewController.swift */,
+				3B75170F279C4DF1002E2BED /* MyCodable.swift */,
+				3B751712279C5C0D002E2BED /* CHelper.h */,
+				3B751713279C5C0D002E2BED /* CHelper.c */,
+				3B751711279C5C0C002E2BED /* SwiftUnderTheHood-Bridging-Header.h */,
+			);
+			path = MyCodable;
+			sourceTree = "<group>";
+		};
 		3B8E600C27935FEE00B76325 = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +84,7 @@
 		3B8E601727935FEE00B76325 /* SwiftUnderTheHood */ = {
 			isa = PBXGroup;
 			children = (
+				3B75170C279C4D7E002E2BED /* MyCodable */,
 				3B8E602D2793642000B76325 /* App */,
 				3B8E602C2793640B00B76325 /* Arrays */,
 				3B8E601E27935FEE00B76325 /* Main.storyboard */,
@@ -111,6 +132,8 @@
 			dependencies = (
 			);
 			name = SwiftUnderTheHood;
+			packageProductDependencies = (
+			);
 			productName = SwiftUnderTheHood;
 			productReference = 3B8E601527935FEE00B76325 /* SwiftUnderTheHood.app */;
 			productType = "com.apple.product-type.application";
@@ -127,6 +150,7 @@
 				TargetAttributes = {
 					3B8E601427935FEE00B76325 = {
 						CreatedOnToolsVersion = 13.2.1;
+						LastSwiftMigration = 1320;
 					};
 				};
 			};
@@ -139,6 +163,8 @@
 				Base,
 			);
 			mainGroup = 3B8E600C27935FEE00B76325;
+			packageReferences = (
+			);
 			productRefGroup = 3B8E601627935FEE00B76325 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -166,13 +192,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B751710279C4DF1002E2BED /* MyCodable.swift in Sources */,
 				3B8E601D27935FEE00B76325 /* ViewController.swift in Sources */,
 				3B8E601927935FEE00B76325 /* AppDelegate.swift in Sources */,
 				3B8E601B27935FEE00B76325 /* SceneDelegate.swift in Sources */,
 				3B53CBF22796091A003709D0 /* MyArrayBody.swift in Sources */,
 				3B53CBEF2796091A003709D0 /* MyContiguousArrayBuffer.swift in Sources */,
 				3B53CBF02796091A003709D0 /* MyArray.swift in Sources */,
+				3B751714279C5C0D002E2BED /* CHelper.c in Sources */,
 				3B53CBF12796091A003709D0 /* MyContiguousArrayStorage.swift in Sources */,
+				3B75170E279C4D9C002E2BED /* MyCodableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +348,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 65HCRGU5FA;
@@ -329,6 +359,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -337,6 +368,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Ilya-Cherkasov.SwiftUnderTheHood";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftUnderTheHood/MyCodable/SwiftUnderTheHood-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -347,6 +380,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 65HCRGU5FA;
@@ -357,6 +391,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -365,6 +400,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Ilya-Cherkasov.SwiftUnderTheHood";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftUnderTheHood/MyCodable/SwiftUnderTheHood-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
