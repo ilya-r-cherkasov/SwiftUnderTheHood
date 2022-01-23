@@ -11,6 +11,8 @@
 		3B53CBF02796091A003709D0 /* MyArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B53CBEC2796091A003709D0 /* MyArray.swift */; };
 		3B53CBF12796091A003709D0 /* MyContiguousArrayStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B53CBED2796091A003709D0 /* MyContiguousArrayStorage.swift */; };
 		3B53CBF22796091A003709D0 /* MyArrayBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B53CBEE2796091A003709D0 /* MyArrayBody.swift */; };
+		3B6B4698279D609D00528893 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6B4697279D609D00528893 /* Layout.swift */; };
+		3B6B469A279D60DC00528893 /* MetaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6B4699279D60DC00528893 /* MetaData.swift */; };
 		3B75170E279C4D9C002E2BED /* MyCodableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B75170D279C4D9C002E2BED /* MyCodableViewController.swift */; };
 		3B751710279C4DF1002E2BED /* MyCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B75170F279C4DF1002E2BED /* MyCodable.swift */; };
 		3B751714279C5C0D002E2BED /* CHelper.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B751713279C5C0D002E2BED /* CHelper.c */; };
@@ -27,6 +29,8 @@
 		3B53CBEC2796091A003709D0 /* MyArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyArray.swift; sourceTree = "<group>"; };
 		3B53CBED2796091A003709D0 /* MyContiguousArrayStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyContiguousArrayStorage.swift; sourceTree = "<group>"; };
 		3B53CBEE2796091A003709D0 /* MyArrayBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyArrayBody.swift; sourceTree = "<group>"; };
+		3B6B4697279D609D00528893 /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
+		3B6B4699279D60DC00528893 /* MetaData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetaData.swift; sourceTree = "<group>"; };
 		3B75170D279C4D9C002E2BED /* MyCodableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCodableViewController.swift; sourceTree = "<group>"; };
 		3B75170F279C4DF1002E2BED /* MyCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCodable.swift; sourceTree = "<group>"; };
 		3B751711279C5C0C002E2BED /* SwiftUnderTheHood-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftUnderTheHood-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -58,6 +62,8 @@
 			children = (
 				3B75170D279C4D9C002E2BED /* MyCodableViewController.swift */,
 				3B75170F279C4DF1002E2BED /* MyCodable.swift */,
+				3B6B4699279D60DC00528893 /* MetaData.swift */,
+				3B6B4697279D609D00528893 /* Layout.swift */,
 				3B751712279C5C0D002E2BED /* CHelper.h */,
 				3B751713279C5C0D002E2BED /* CHelper.c */,
 				3B751711279C5C0C002E2BED /* SwiftUnderTheHood-Bridging-Header.h */,
@@ -194,11 +200,13 @@
 			files = (
 				3B751710279C4DF1002E2BED /* MyCodable.swift in Sources */,
 				3B8E601D27935FEE00B76325 /* ViewController.swift in Sources */,
+				3B6B469A279D60DC00528893 /* MetaData.swift in Sources */,
 				3B8E601927935FEE00B76325 /* AppDelegate.swift in Sources */,
 				3B8E601B27935FEE00B76325 /* SceneDelegate.swift in Sources */,
 				3B53CBF22796091A003709D0 /* MyArrayBody.swift in Sources */,
 				3B53CBEF2796091A003709D0 /* MyContiguousArrayBuffer.swift in Sources */,
 				3B53CBF02796091A003709D0 /* MyArray.swift in Sources */,
+				3B6B4698279D609D00528893 /* Layout.swift in Sources */,
 				3B751714279C5C0D002E2BED /* CHelper.c in Sources */,
 				3B53CBF12796091A003709D0 /* MyContiguousArrayStorage.swift in Sources */,
 				3B75170E279C4D9C002E2BED /* MyCodableViewController.swift in Sources */,
