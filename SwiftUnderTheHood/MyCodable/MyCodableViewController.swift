@@ -11,6 +11,7 @@ final class MyCodableViewController: UIViewController {
     
     var testClass = Test()
     var simpleClass: SimpleClass!
+    var secondSimpleClass: SimpleClass!
     
     var testClassPointer: UnsafeMutableRawPointer {
         Unmanaged.passUnretained(testClass).toOpaque()
@@ -67,7 +68,8 @@ final class MyCodableViewController: UIViewController {
         
         print("Битовое поле счетчика ссылок: \(referenceCounter)")
         
-        manualInitialization()
+        simpleClass = manualInitialization()
+        secondSimpleClass = simpleClass
         
         let simplePtr = MyClassMetadata(ptr: simpleClassMetaPointer)
         simplePtr.descriptor.fieldDescriptor.records.forEach { field in
@@ -75,34 +77,44 @@ final class MyCodableViewController: UIViewController {
         }
         print("Битовое поле счетчика ссылок: \(simpleClassReferenceCounter)")
         print(simpleClass.simpleValue)
-        print(simpleClass.debugDescription)
+        print(simpleClass.secondValue)
+        print(simpleClass.add())
         
-        simpleClass = SimpleClass(simpleValue: 8)
+//        secondSimpleClass = simpleClass
+//        print("Битовое поле счетчика ссылок: \(simpleClassReferenceCounter)")
+        simpleClass = SimpleClass(simpleValue: 8, secondValue: 13)
+        secondSimpleClass = simpleClass
+        print(simpleClass.add())
     }
     
     func adress(of object: UnsafeRawPointer) {
         print(String(format: "%p", Int(bitPattern: object)))
     }
     
-    func manualInitialization() {
+    func manualInitialization() -> SimpleClass {
         
         // Сначала передаем в simpleClass ссылку
-        let ptr = UnsafeMutableRawPointer.allocate(byteCount: 24, alignment: MemoryLayout<SimpleClass>.alignment)
+        let ptr = UnsafeMutableRawPointer.allocate(byteCount: 32, alignment: 0)
         let ptrAddress = getRawAdressVoid(ptr)
         ptr.initializeMemory(as: Int64.self, repeating: ptrAddress, count: 1)
-        (ptr + 8).initializeMemory(as: Int64.self, repeating: 3, count: 1)
-        (ptr + 16).initializeMemory(as: Int64.self, repeating: 15, count: 1)
-        simpleClass = ptr.load(as: SimpleClass.self)
+        (ptr + 8).initializeMemory(as: Int64.self, repeating: 0, count: 1) //обязательно тут
+        (ptr + 16).initializeMemory(as: Int64.self, repeating: 15, count: 1) //обязательно тут
+        (ptr + 24).initializeMemory(as: Int64.self, repeating: 40, count: 1) //обязательно тут
         
+        //получаем ссылку на класс
+        let ref = ptr.load(as: SimpleClass.self)
+        
+        //готовим ссылку на метаданные
         let metaPtr = unsafeBitCast(SimpleClass.self, to: UnsafeMutablePointer<Int64>.self) //
         let address = getRawAdress(metaPtr)
         
-        // потом делаем поля
+        // вставляем ссылку на метаданные (heap object)
         ptr.initializeMemory(as: Int64.self, repeating: address, count: 1)
-        (ptr + 8).initializeMemory(as: Int64.self, repeating: 4, count: 1)
-        (ptr + 16).initializeMemory(as: Int64.self, repeating: 15, count: 1)
         
+        (ptr + 8).initializeMemory(as: Int64.self, repeating: 3, count: 1) //костыль
         print("Ручная иницилизация класса")
+        
+        return ref
     }
     
 }

@@ -20,12 +20,18 @@ class Test {
 class SimpleClass {
     
     let simpleValue: Int
+    let secondValue: Int
     
-    init(simpleValue: Int) {
+    init(simpleValue: Int, secondValue: Int) {
         self.simpleValue = simpleValue
+        self.secondValue = secondValue
+    }
+    
+    func add() -> Int {
+        simpleValue + secondValue
     }
     
     deinit {
-        print("SimpleClass deinit")
+        print("SimpleClass deinit with value \(simpleValue)")
     }
 }
