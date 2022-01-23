@@ -3,3 +3,5 @@
 //
 
 void* swiftIntToPointer(long long address);
+long long getRawAdress(long long *pointer);
+long long getRawAdressVoid(void *pointer);

@@ -17,3 +17,15 @@ class Test {
 
 }
 
+class SimpleClass {
+    
+    let simpleValue: Int
+    
+    init(simpleValue: Int) {
+        self.simpleValue = simpleValue
+    }
+    
+    deinit {
+        print("SimpleClass deinit")
+    }
+}
